@@ -1,0 +1,20 @@
+# Rhino
+newmtl model (2)
+Ka 1.0000 1.0000 1.0000
+Kd 1.0000 1.0000 1.0000
+Ks 0.0000 0.0000 0.0000
+Tf 0.0000 0.0000 0.0000
+d 1.0000
+Ns 0.0000
+map_Kd boxing-chart.jpg
+map_Bump tv_Screen_Roughness.png
+newmtl model (1)
+Ka 1.0000 1.0000 1.0000
+Kd 1.0000 1.0000 1.0000
+Ks 0.0000 0.0000 0.0000
+Tf 0.0000 0.0000 0.0000
+d 1.0000
+Ns 0.0000
+map_Kd tv_tv_BaseColor.png
+map_Bump tv_tv_Normal.tga.png
+map_D tv_tv_Opacity.tga.png
