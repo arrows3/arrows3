@@ -108,7 +108,7 @@ function init(){
     //Creamos nuestro marcador 
     let markerControl = new THREEx.ArMarkerControls(arToolkitContext, markerRoot1, {
 
-        type: 'pattern', patternUrl: 'data/ARBOL.patt',
+        type: 'pattern', patternUrl: 'data/guantes.patt',
     });
 
     markerRoot2 =  new THREE.Group();
@@ -141,13 +141,6 @@ function init(){
     let markerControl5 = new THREEx.ArMarkerControls(arToolkitContext, markerRoot5, {
 
         type: 'pattern', patternUrl: 'data/saco.patt',
-       
-        markerRoot6 =  new THREE.Group();
-    scene.add(markerRoot5);
-    //Creamos nuestro marcador 
-    let markerControl5 = new THREEx.ArMarkerControls(arToolkitContext, markerRoot5, {
-
-        type: 'pattern', patternUrl: 'data/ARBOL.patt',
     });
 
 
@@ -196,24 +189,6 @@ function init(){
                 markerRoot2.add(RhinoMesh);
             }, onProgress, onError);
     });
-//ARBOL
-new THREE.MTLLoader()
-.setPath('data/ARBOL/')
-.load('ARBOL.mtl', function (materials) {
-    materials.preload();
-    new THREE.OBJLoader()
-        .setMaterials(materials)
-        .setPath('data/tv/')
-        .load('ARBOL.obj', function (group) {
-            RhinoMesh = group.children[0];
-            RhinoMesh.material.side = THREE.DoubleSide;
-            RhinoMesh.scale.set(0.2, 0.2, 0.2);
-            RhinoMesh.castShadow = true;
-            RhinoMesh.receiveShadow = false;
-            RhinoMesh.position.y=-.5;
-            markerRoot2.add(RhinoMesh);
-        }, onProgress, onError);
-});
 
     //CONO
     new THREE.MTLLoader()
@@ -226,10 +201,12 @@ new THREE.MTLLoader()
             .load('cono.obj', function (group) {
                 RhinoMesh = group.children[0];
                 RhinoMesh.material.side = THREE.DoubleSide;
-                RhinoMesh.scale.set(0.2, 0.2, 0.2);
+                RhinoMesh.scale.set(0.02, 0.02, 0.02);
                 RhinoMesh.castShadow = true;
                 RhinoMesh.receiveShadow = false;
-                RhinoMesh.position.y=-.5;
+                RhinoMesh.position.y=0;
+                RhinoMesh.position.x=-1;
+                RhinoMesh.position.z=-4;
                 markerRoot3.add(RhinoMesh);
             }, onProgress, onError);
     });
