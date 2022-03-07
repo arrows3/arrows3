@@ -196,7 +196,7 @@ new THREE.MTLLoader()
     materials.preload();
     new THREE.OBJLoader()
         .setMaterials(materials)
-        .setPath('data/tv/')
+        .setPath('data/ARBOL/')
         .load('ARBOL.obj', function (group) {
             RhinoMesh = group.children[0];
             RhinoMesh.material.side = THREE.DoubleSide;
