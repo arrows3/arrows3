@@ -141,6 +141,13 @@ function init(){
     let markerControl5 = new THREEx.ArMarkerControls(arToolkitContext, markerRoot5, {
 
         type: 'pattern', patternUrl: 'data/saco.patt',
+       
+        markerRoot6 =  new THREE.Group();
+    scene.add(markerRoot5);
+    //Creamos nuestro marcador 
+    let markerControl5 = new THREEx.ArMarkerControls(arToolkitContext, markerRoot5, {
+
+        type: 'pattern', patternUrl: 'data/ARBOL.patt',
     });
 
 
@@ -196,7 +203,7 @@ new THREE.MTLLoader()
     materials.preload();
     new THREE.OBJLoader()
         .setMaterials(materials)
-        .setPath('data/ARBOL/')
+        .setPath('data/tv/')
         .load('ARBOL.obj', function (group) {
             RhinoMesh = group.children[0];
             RhinoMesh.material.side = THREE.DoubleSide;
