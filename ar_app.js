@@ -189,6 +189,24 @@ function init(){
                 markerRoot2.add(RhinoMesh);
             }, onProgress, onError);
     });
+//ARBOL
+new THREE.MTLLoader()
+.setPath('data/ARBOL/')
+.load('ARBOL.mtl', function (materials) {
+    materials.preload();
+    new THREE.OBJLoader()
+        .setMaterials(materials)
+        .setPath('data/tv/')
+        .load('ARBOL.obj', function (group) {
+            RhinoMesh = group.children[0];
+            RhinoMesh.material.side = THREE.DoubleSide;
+            RhinoMesh.scale.set(0.2, 0.2, 0.2);
+            RhinoMesh.castShadow = true;
+            RhinoMesh.receiveShadow = false;
+            RhinoMesh.position.y=-.5;
+            markerRoot2.add(RhinoMesh);
+        }, onProgress, onError);
+});
 
     //CONO
     new THREE.MTLLoader()
