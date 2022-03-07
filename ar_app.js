@@ -108,7 +108,7 @@ function init(){
     //Creamos nuestro marcador 
     let markerControl = new THREEx.ArMarkerControls(arToolkitContext, markerRoot1, {
 
-        type: 'pattern', patternUrl: 'data/guantes.patt',
+        type: 'pattern', patternUrl: 'data/ARBOL.patt',
     });
 
     markerRoot2 =  new THREE.Group();
